@@ -96,19 +96,14 @@ function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num % 2 == 0){
-    return true
-  } else return false
-  
-}
+  return num % 2 === 0
+} 
 
 function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num % 2 == 1) {
-    return true
-  } else return false
+ return num % 2 === 1
 }
 
 function elevarAlCuadrado(num) {
@@ -154,11 +149,13 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (numero < 0)
-  return "Es negativo"
-  if (numero > 0)
-  return "Es positivo" 
-  else return false  
+  if (numero > 0) {
+    return "Es positivo"
+  }else if (numero < 0){
+    return "Es negativo"
+  } else if (numero === 0){
+    return false
+  }
 
 }
 
@@ -201,8 +198,8 @@ function retornarPerimetro(lado){
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-return base * altura / 2
-}
+  return base * altura / 2
+}  
 
 
 function deEuroAdolar(euro){
@@ -218,11 +215,15 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u")
-  return "Es vocal"
-  if (letra.length > 1)
-   return "Dato incorrecto"
-} 
+if (letra.length > 1 ){
+  return "Dato incorrecto"
+}
+else if ( letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+    return "Es vocal"
+  }
+
+  }
+ 
 
 
 
